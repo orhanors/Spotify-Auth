@@ -12,7 +12,7 @@ function Login() {
 	const [errorMsg, setErrorMsg] = useState("");
 	const { email, password } = formData;
 
-	const handleChange = (e: any) => {
+	const handleChange = (e) => {
 		setFormData({
 			...formData,
 			[e.target.name]: e.target.value,
@@ -21,7 +21,7 @@ function Login() {
 		setErrorMsg("");
 	};
 
-	const handleSubmit = async (e: any) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
 
 		//Validate inputs

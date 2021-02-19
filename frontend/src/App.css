@@ -83,6 +83,21 @@ img.logo {
 	color: #8b8b8b;
 	font-weight: 600;
 }
+
+.sidebar-logout {
+	display: flex;
+	flex-direction: row;
+	justify-content: end;
+}
+
+.sidebar-logout button {
+	position: fixed;
+	top: 40rem;
+	font-weight: 500;
+	padding: 1rem;
+	border: none;
+	border-radius: 10px;
+}
 /*PLAYER*/
 .player {
 	height: 5.5rem;

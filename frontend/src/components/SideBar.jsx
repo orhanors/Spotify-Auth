@@ -6,6 +6,7 @@ import { faPlus, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import CreatePlaylistModal from "./common/CreatePlaylistModal";
 import Playlist from "./Playlist";
+import Logout from "./Logout";
 class SideBar extends React.Component {
 	state = { modalShow: false };
 
@@ -142,6 +143,12 @@ class SideBar extends React.Component {
 
 						<Col>
 							<Playlist />
+						</Col>
+					</Row>
+
+					<Row className='sidebar-logout mt-1 mx-1'>
+						<Col>
+							<Logout />
 						</Col>
 					</Row>
 				</Row>

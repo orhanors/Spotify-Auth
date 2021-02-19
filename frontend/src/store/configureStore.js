@@ -20,7 +20,12 @@ export const initialState = {
 		loading: false,
 		errorMessage: null,
 	},
-	user: { userInfo: {}, isLoggedIn: false, playLists: [] },
+	user: {
+		userInfo: {},
+		isLoggedIn: false,
+
+		errorMessage: null,
+	},
 };
 const composedEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

@@ -13,6 +13,7 @@ const api = ({ dispatch }) => (next) => async (action) => {
 	const {
 		url,
 		headers,
+
 		method,
 		data,
 		onSuccess,
@@ -30,6 +31,7 @@ const api = ({ dispatch }) => (next) => async (action) => {
 			method,
 			data,
 			headers,
+			withCredentials: true,
 		});
 
 		if (response?.data.data) {

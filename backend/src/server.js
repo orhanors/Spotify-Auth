@@ -3,7 +3,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 dotenv.config();
-
+const services = require("./routes");
 const {
 	notFoundHandler,
 	genericErrorHandler,
@@ -12,7 +12,7 @@ const {
 	unauthorizedError,
 } = require("./middlewares/errorHandling");
 const passport = require("passport");
-const oauth = require("./src/middlewares/oauth");
+const oauth = require("./middlewares/oauth");
 const cookieParser = require("cookie-parser");
 const server = express();
 
@@ -43,12 +43,13 @@ const corsOptions = {
 //SETTING UP MIDDLEWARES
 server.use(cors(corsOptions));
 server.use(express.json());
-server.use(cookieParser());
 server.use(passport.initialize());
+server.use(cookieParser());
 
 //ROUTES
+server.use("/api", services);
 
-//ERRO HANDLING MIDDLEWARES
+//ERROR HANDLING MIDDLEWARES
 server.use(notFoundHandler);
 server.use(badRequestHandler);
 server.use(forbiddenError);
