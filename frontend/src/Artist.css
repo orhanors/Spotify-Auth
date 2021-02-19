@@ -1,0 +1,110 @@
+#artistpage .artist-top-header {
+	position: relative;
+}
+
+#artistpage .artist-top-image {
+	position: relative;
+	text-align: center;
+}
+
+#artistpage .artist-top-image img {
+	width: 82vw;
+	height: 45vh;
+	background-size: cover;
+	opacity: 30%;
+	position: relative;
+	object-fit: cover;
+}
+
+#artistpage .artist-top-image img::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: rgb(18, 18, 18);
+	background: linear-gradient(
+		8deg,
+		rgba(18, 18, 18, 1) 0%,
+		rgba(18, 18, 18, 0) 100%
+	);
+}
+
+#artistpage .artist-top-image *:not(img) {
+	position: absolute;
+	left: 50%;
+}
+
+#artistpage .artist-top-image p {
+	position: absolute;
+	width: 40vw;
+	color: gray;
+	transform: translateX(-50%);
+	top: 3rem;
+}
+
+#artistpage .artist-top-components h5 {
+	width: 20vw;
+	position: absolute;
+	color: white;
+	font-weight: bolder;
+	font-size: 2rem;
+	transform: translateX(-50%);
+	top: 6rem;
+	white-space: "nowrap";
+}
+
+#artistpage .artist-top-image-buttons button:nth-of-type(1) {
+	position: absolute;
+	top: 10rem;
+	background-color: #1db954;
+	left: -11rem;
+	font-size: 1rem;
+	text-align: center;
+	border: 1px #1db954;
+	border-radius: 20px;
+	border: none;
+}
+
+#artistpage .artist-top-image-buttons button:nth-of-type(2) {
+	position: absolute;
+	top: 10rem;
+	background-color: transparent;
+	left: -2rem;
+	font-size: 0.9rem;
+	text-align: center;
+	border: 1px solid white;
+	border-radius: 20px;
+	color: white;
+}
+
+#artistpage .artist-top-image-buttons button:nth-of-type(3) {
+	/* TODO when user click it shows border. delete border*/
+	position: absolute;
+	top: 8.5rem;
+	background-color: transparent;
+	left: 7rem;
+	border: none;
+	font-size: 2rem;
+}
+
+#artistpage nav {
+	position: absolute;
+	top: 75%;
+	left: -55%;
+}
+
+#artistpage section.page {
+	/* margin-left: 2rem; */
+	color: white;
+}
+
+#artistpage .round-button {
+	margin-bottom: 30px;
+}
+#artistpage .about p {
+	color: rgb(163, 158, 158);
+}
